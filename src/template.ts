@@ -19,7 +19,7 @@ export interface Options {
 const doubleBraceRegex = /\{\{(\d+|[a-z$_][\w\-$]*(?:\.[\w\-$]*)*)\}\}/gi;
 const braceRegex = /\{(\d+|[a-z$_][\w\-$]*(?:\.[\w\-$]*)*)\}/gi;
 
-export default function template(
+export function template(
   template: string,
   data: Record<string, any>,
   { ignoreMissing = false, transform = ({ value }) => value }: Options = {},
