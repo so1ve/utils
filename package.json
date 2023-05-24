@@ -50,6 +50,9 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "escape-goat": "^4.0.0"
+  },
   "devDependencies": {
     "@antfu/ni": "^0.21.3",
     "@so1ve/eslint-config": "^0.93.2",
@@ -62,8 +65,5 @@
     "unbuild": "^1.2.1",
     "vite": "^4.3.8",
     "vitest": "^0.31.1"
-  },
-  "dependencies": {
-    "escape-goat": "^4.0.0"
   }
 }
