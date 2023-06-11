@@ -46,3 +46,13 @@ export function at<T>(array: readonly T[] | [], index: number): T | undefined {
 
   return array[index];
 }
+
+export const arrayEquals = <T>(array1: T[], array2: T[]): boolean =>
+  array1.length === array2.length
+    ? array1.every((element, index) => element === array2[index])
+    : false;
+
+export const arrayStartsWith = <T>(array: T[], prefix: T[]): boolean =>
+  prefix.length > array.length
+    ? false
+    : arrayEquals(array.slice(0, prefix.length), prefix);
