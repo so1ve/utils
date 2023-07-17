@@ -51,7 +51,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "escape-goat": "^4.0.0"
+    "@types/throttle-debounce": "^5.0.0",
+    "escape-goat": "^4.0.0",
+    "throttle-debounce": "^5.0.0"
   },
   "devDependencies": {
     "@antfu/ni": "^0.21.3",

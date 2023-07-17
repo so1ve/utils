@@ -5,3 +5,4 @@ export * from "./object";
 export * from "./string";
 export * from "./template";
 export * from "./types";
+export * from "./vendor";
