@@ -7,11 +7,11 @@ export type Fn<T = void> = () => T;
 export type Constructor<T = void> = new (...args: any[]) => T;
 export type ElementOf<T> = T extends (infer E)[] ? E : never;
 export type UnionToIntersection<U> = (
-  U extends unknown ? (k: U) => void : never
+	U extends unknown ? (k: U) => void : never
 ) extends (k: infer I) => void
-  ? I
-  : never;
+	? I
+	: never;
 export type ArgumentsType<T> = T extends (...args: infer A) => any ? A : never;
-export type MergeInsertions<T> = T extends object
-  ? { [K in keyof T]: MergeInsertions<T[K]> }
-  : T;
+export type MergeInsertions<T> = T extends Record<PropertyKey, unknown>
+	? { [K in keyof T]: MergeInsertions<T[K]> }
+	: T;

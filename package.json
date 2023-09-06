@@ -1,71 +1,70 @@
 {
-  "name": "@so1ve/utils",
-  "version": "0.3.0",
-  "packageManager": "pnpm@8.7.4",
-  "author": "Ray <i@mk1.io> (@so1ve)",
-  "description": "",
-  "keywords": [],
-  "homepage": "https://github.com/so1ve/utils#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/so1ve/utils.git"
-  },
-  "bugs": {
-    "url": "https://github.com/so1ve/utils/issues"
-  },
-  "license": "MIT",
-  "sideEffects": false,
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
-    }
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "build": "unbuild",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prepublishOnly": "nr build",
-    "release": "bumpp --commit --push --tag && pnpm publish",
-    "start": "tsx src/index.ts",
-    "stub": "unbuild --stub",
-    "test": "vitest",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@types/throttle-debounce": "^5.0.0",
-    "escape-goat": "^4.0.0",
-    "throttle-debounce": "^5.0.0"
-  },
-  "devDependencies": {
-    "@antfu/ni": "^0.21.3",
-    "@so1ve/eslint-config": "^0.110.0",
-    "@types/node": "^20.2.3",
-    "bumpp": "^9.1.0",
-    "eslint": "^8.41.0",
-    "prettier": "^2.8.8",
-    "tsx": "^3.12.7",
-    "typescript": "^5.0.4",
-    "unbuild": "^1.2.1",
-    "vite": "^4.3.8",
-    "vitest": "^0.32.0"
-  }
+	"name": "@so1ve/utils",
+	"version": "0.3.0",
+	"packageManager": "pnpm@8.7.4",
+	"author": "Ray <i@mk1.io> (@so1ve)",
+	"description": "",
+	"keywords": [],
+	"homepage": "https://github.com/so1ve/utils#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/so1ve/utils.git"
+	},
+	"bugs": {
+		"url": "https://github.com/so1ve/utils/issues"
+	},
+	"license": "MIT",
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.mjs"
+		}
+	},
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"typesVersions": {
+		"*": {
+			"*": [
+				"./dist/*",
+				"./dist/index.d.ts"
+			]
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "pkgroll",
+		"lint": "eslint . && prettier . --check",
+		"lint:fix": "eslint . --fix && prettier . --write",
+		"prepublishOnly": "nr build",
+		"release": "bumpp --commit --push --tag && pnpm publish",
+		"test": "vitest",
+		"typecheck": "tsc --noEmit",
+		"watch": "pkgroll -w"
+	},
+	"dependencies": {
+		"@types/throttle-debounce": "^5.0.0",
+		"escape-goat": "^4.0.0",
+		"throttle-debounce": "^5.0.0"
+	},
+	"devDependencies": {
+		"@antfu/ni": "^0.21.8",
+		"@so1ve/eslint-config": "^0.121.1",
+		"@so1ve/prettier-config": "^0.121.1",
+		"@types/node": "^20.5.9",
+		"bumpp": "^9.2.0",
+		"eslint": "^8.48.0",
+		"pkgroll": "^1.11.0",
+		"prettier": "^3.0.3",
+		"typescript": "^5.2.2",
+		"vite": "^4.4.9",
+		"vitest": "^0.34.3"
+	}
 }
