@@ -12,6 +12,7 @@ export type UnionToIntersection<U> = (
 	? I
 	: never;
 export type ArgumentsType<T> = T extends (...args: infer A) => any ? A : never;
-export type MergeInsertions<T> = T extends Record<PropertyKey, unknown>
-	? { [K in keyof T]: MergeInsertions<T[K]> }
-	: T;
+export type MergeInsertions<T> =
+	T extends Record<PropertyKey, unknown>
+		? { [K in keyof T]: MergeInsertions<T[K]> }
+		: T;
