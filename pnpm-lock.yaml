@@ -17,8 +17,8 @@ dependencies:
 
 devDependencies:
   '@antfu/ni':
-    specifier: ^0.21.8
-    version: 0.21.12
+    specifier: ^0.23.0
+    version: 0.23.2
   '@so1ve/eslint-config':
     specifier: ^0.121.1
     version: 0.121.4(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)(prettier@3.1.1)(typescript@5.3.3)(vitest@0.34.6)
@@ -57,8 +57,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /@antfu/ni@0.21.12:
-    resolution: {integrity: sha512-2aDL3WUv8hMJb2L3r/PIQWsTLyq7RQr3v9xD16fiz6O8ys1xEyLhhTOv8gxtZvJiTzjTF5pHoArvRdesGL1DMQ==}
+  /@antfu/ni@0.23.2:
+    resolution: {integrity: sha512-FSEVWXvwroExDXUu8qV6Wqp2X3D1nJ0Li4LFymCyvCVrm7I3lNfG0zZWSWvGU1RE7891eTnFTyh31L3igOwNKQ==}
     hasBin: true
     dev: true
 
@@ -2147,6 +2147,7 @@ packages:
   /eslint-plugin-i@2.28.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
     resolution: {integrity: sha512-a4oVt0j3ixNhGhvV4XF6NS7OWRFK2rrJ0Q5C4S2dSRb8FxZi31J0uUd5WJLL58wnVJ/OiQ1BxiXnFA4dWQO1Cg==}
     engines: {node: '>=12'}
+    deprecated: Please migrate to the brand new `eslint-plugin-import-x` instead
     peerDependencies:
       eslint: ^7.2.0 || ^8
     dependencies:
